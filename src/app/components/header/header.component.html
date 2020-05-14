@@ -1,0 +1,25 @@
+<nav class="navbar navbar-collapse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" routerLinkActive="active" [routerLink]="['/']" role="button">
+                <img src="../../assets/images/FedexExpLogo.gif" style="min-width:100%; margin-top: 10%"/>
+            </a>
+        </div>
+        <ul class="nav navbar-right">
+            <li class="btn btn-outline-success btn-lg">In session FEDEX VENDOR</li>
+            <li class="btn btn-outline-secondary btn-lg">Back To CCP</li>
+            <li class="btn btn-outline-secondary btn-lg">logout</li>
+            <li *ngIf="showChangeSession" class="btn btn-outline-secondary btn-lg"
+                [routerLink]="['session']" (click)="clickSession()"
+            >Change Session</li>
+            <li *ngIf="showChangeMenu" class="btn btn-outline-secondary btn-lg"
+                [routerLink]="['menu']" (click)="clickMenu()"
+            >Menu</li>
+        </ul>
+        <div class="navbar-header">
+            <a routerLinkActive="active" [routerLink]="['/']" role="button">
+                <img src="../../assets/images/cplogo.jpg" style="min-width:100%;"/>
+            </a>
+        </div>
+    </div>
+</nav>
